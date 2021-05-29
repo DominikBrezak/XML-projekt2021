@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Shop stranica</title>
+	<link href="stil.css" rel="stylesheet" type="text/css" media="all">
+	<link href="fonts.css" rel="stylesheet" type="text/css" media="all">
+
+	</head>
+	<body>
+        <header id="menu-wrapper">
+            <h1>Destiny Lounge</h1>
+        </header>
+        <div id="menu-wrapper">
+            <div id="menu" class="container">
+                <ul>
+                    <li><a href="pocetnastranica.html">Vijesti</a></li>
+                    <li><a href="shopstranica.html">Shop</a></li>
+                    <li><a href="kontakt_stranica.html">Kontakt</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+		<div id="page" class="container">
+			<div id="content">
+          <h1>Ponuda igara</h1>
+          <table id='b'>
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Cijena u kunama</th>
+                    <th>Žanr</th>
+                    <th>Godina izdanja</th>
+                </tr>                
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        
+        <script>
+          let xmlContent = '';
+         let tableshop = document.getElementById('b');
+          fetch('shop.xml').then((response)=> {
+         response.text().then((xml)=>{
+         xmlContent = xml;
+
+       let parser = new DOMParser();
+       let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+       let shop = xmlDOM.querySelectorAll('Igra');
+
+       shop.forEach(IgraXmlNode => {
+
+           let row = document.createElement('tr');
+
+           //ime 
+           let td = document.createElement('td');
+           td.innerText = IgraXmlNode.children[0].innerHTML;
+           row.appendChild(td);
+
+           //Cijena
+           td = document.createElement('td');
+           td.innerText = IgraXmlNode.children[1].innerHTML;
+           row.appendChild(td);
+           
+           //Žanr
+           td = document.createElement('td');
+           td.innerText = '' + IgraXmlNode.children[2].innerHTML;
+           row.appendChild(td);
+
+           //Godina izdanja
+           td = document.createElement('td');
+           td.innerText = '' + IgraXmlNode.children[3].innerHTML;
+           row.appendChild(td);
+
+           tableshop.children[1].appendChild(row);
+           
+                 });
+       
+              });
+              });    
+           </script>
+			</div>
+    </br>
+  </br>
+      <div id="content">
+          <h1>Ponuda tehnike</h1>
+          <table id='tabla'>
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Cijena u kunama</th>
+                    <th>Godina proizvodnje</th>
+                </tr>                
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+                <script>
+                  let tableshoptehnika = document.getElementById('tabla');
+                   fetch('shop.xml').then((response)=> {
+                  response.text().then((xml)=>{
+                  xmlContent = xml;
+
+                let parser = new DOMParser();
+                let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+                let shoptehnika = xmlDOM.querySelectorAll('Proizvod');
+
+                shoptehnika.forEach(ProizvodXmlNode => {
+
+                    let row = document.createElement('tr');
+
+                    //ime 
+                    let td = document.createElement('td');
+                    td.innerText = ProizvodXmlNode.children[0].innerHTML;
+                    row.appendChild(td);
+
+                    //Cijena
+                    td = document.createElement('td');
+                    td.innerText = ProizvodXmlNode.children[1].innerHTML;
+                    row.appendChild(td);
+                    
+                    //Godina proizvodnje
+                    td = document.createElement('td');
+                    td.innerText = '' + ProizvodXmlNode.children[2].innerHTML;
+                    row.appendChild(td);
+
+                    tableshoptehnika.children[1].appendChild(row);
+                    
+                });
+                
+            });
+        });    
+                    </script>
+			</div>
+            
+        </br>
+    </br>
+        <div id="content">
+            <h1>Dostava</h1>
+            <table id='dostava'>
+              <thead>
+                  <tr>
+                      <th>Vrsta</th>
+                      <th>Opis</th>
+                      <th>Dodatna naplata</th>
+                  </tr>                
+              </thead>
+              <tbody>
+  
+              </tbody>
+          </table>
+                  <script>
+                    let tabledostava = document.getElementById('dostava');
+                     fetch('shop.xml').then((response)=> {
+                    response.text().then((xml)=>{
+                    xmlContent = xml;
+  
+                  let parser = new DOMParser();
+                  let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+                  let dostava = xmlDOM.querySelectorAll('Dostava');
+  
+                  dostava.forEach(DostavaXmlNode => {
+  
+                      let row = document.createElement('tr');
+  
+                      //ime 
+                      let td = document.createElement('td');
+                      td.innerText = DostavaXmlNode.children[0].innerHTML;
+                      row.appendChild(td);
+  
+                      //Cijena
+                      td = document.createElement('td');
+                      td.innerText = DostavaXmlNode.children[1].innerHTML;
+                      row.appendChild(td);
+                      
+                      //Godina proizvodnje
+                      td = document.createElement('td');
+                      td.innerText = '' + DostavaXmlNode.children[2].innerHTML;
+                      row.appendChild(td);
+  
+                      tabledostava.children[1].appendChild(row);
+                      
+                  });
+                  
+              });
+          });    
+                      </script>
+              </div>
+		</div>
+
+    
+	</div>
+		
+
+	<div id="footer">
+		<h2>Dominik Brezak</h2>
+        <h3>Xml projekt</h3>
+		<p>@TVZ</p>
+	</div>
+	
+	
+</body>
+</html>

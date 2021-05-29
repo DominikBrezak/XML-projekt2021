@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shop xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="shopschema.xsd">
+    <Igre>
+        <Igra>
+            <Naslov>Destiny 2</Naslov>
+            <Cijena>269.99</Cijena>
+            <Zanr>Looter shooter,MMO</Zanr>
+            <GodinaIzdanja>2017</GodinaIzdanja>
+        </Igra>
+        <Igra>
+            <Naslov>Halo Infinite</Naslov>
+            <Cijena>499.99</Cijena>
+            <Zanr>FPS,SIFY</Zanr>
+            <GodinaIzdanja>2021</GodinaIzdanja>
+        </Igra>
+        <Igra>
+            <Naslov>Minecraft</Naslov>
+            <Cijena>149.99</Cijena>
+            <Zanr>Avantura,RPG</Zanr>
+            <GodinaIzdanja>2011</GodinaIzdanja>
+        </Igra>
+        <Igra>
+            <Naslov>F1 2021</Naslov>
+            <Cijena>499.99</Cijena>
+            <Zanr>Racing,Driving</Zanr>
+            <GodinaIzdanja>2021</GodinaIzdanja>
+        </Igra>
+        <Igra>
+            <Naslov>NBA2k2021</Naslov>
+            <Cijena>249.99</Cijena>
+            <Zanr>Sport</Zanr>
+            <GodinaIzdanja>2020</GodinaIzdanja>
+        </Igra>
+    </Igre>
+    <Tehnika>
+        <Proizvod>
+            <Ime>Logitech G Pro X</Ime>
+            <Cijena>799.99</Cijena>
+            <GodinaProizvodnje>2018</GodinaProizvodnje>
+        </Proizvod>
+        <Proizvod>
+            <Ime>Logitech G203</Ime>
+            <Cijena>168.99</Cijena>
+            <GodinaProizvodnje>2019</GodinaProizvodnje>
+        </Proizvod>
+        <Proizvod>
+            <Ime>Playstation 5</Ime>
+            <Cijena>4560</Cijena>
+            <GodinaProizvodnje>2020</GodinaProizvodnje>
+        </Proizvod>
+        <Proizvod>
+            <Ime>Xbox Series X</Ime>
+            <Cijena>4400</Cijena>
+            <GodinaProizvodnje>2020</GodinaProizvodnje>
+        </Proizvod>
+    </Tehnika>
+    <Dostave>
+        <Dostava>
+            <Vrsta>Pouzecem</Vrsta>
+            <Opis>Naše dostavne službe će vam dostaviti paket na kućnu
+            adresu i plačanje vršite na licu mjesta s njima prilikom preuzimanja paketa.</Opis>
+            <Cijena>35 kuna</Cijena>
+        </Dostava>
+        <Dostava>
+            <Vrsta>Preuzimanjem u poslovnici</Vrsta>
+            <Opis>Paket možete preuzeti i u našoj poslovnici bez dostave na kućnu adresu.</Opis>
+            <Cijena>0 kuna</Cijena>
+        </Dostava>
+    </Dostave>
+</Shop>

@@ -1,0 +1,3 @@
+Ako želite lokalno pokrenuti stranicu preko svojeg računala trebate napraviti sljedeće:
+Unutar visual Studio Coda trebate skinuti ekstenziju Live server.
+Bez live servera web stranica će se učitati i prikazivati sve osim shop-a u kojem se ispisuje xml.
